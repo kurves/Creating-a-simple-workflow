@@ -33,15 +33,14 @@ jobs:
 
     docker:
       - image: cimg/base:stable
-        auth:
-          username: MY_ENV_VAR
+        
            
     
     steps:
       - checkout
       - run:
-          name: "Say Name"
-          command: "echo  Myname"
+          name: "Print my  Name"
+          command: echo  $MY_ENV_VAR
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
