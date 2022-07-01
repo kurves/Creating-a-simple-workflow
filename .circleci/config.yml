@@ -33,7 +33,7 @@ jobs:
 
     docker:
       - image: cimg/base:stable
-       auth:
+        auth:
           username: MY_ENV_VAR
            
     
