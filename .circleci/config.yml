@@ -18,8 +18,8 @@ jobs:
           name: "Say hello"
           command: "echo Hello!"
 
+
   save_hello_world_output:    
-     
     docker:
       - image: cimg/base:stable
 
@@ -43,13 +43,10 @@ jobs:
     
     steps:
       - checkout
-      - run:
-          name: "print_output_file"
-          command: echo  "Sharing files ouput"
-      
+     
       - attach_workspace:
           at: ~/
-      - run: cat ~/output.txt    
+      - run: Kurves ~/output.txt    
 
 
 # Invoke jobs via workflows
