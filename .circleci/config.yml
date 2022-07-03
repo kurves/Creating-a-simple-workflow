@@ -27,9 +27,9 @@ jobs:
           name: "Say world"
           command: echo "Sharing files exercise" > ~/output.txt
       - persist_to_workspace:
-        root: ~/
-        paths:
-          - output.txt
+          root: ~/
+          paths:
+            - output.txt
 
   print_output_file:
     docker:
