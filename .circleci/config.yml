@@ -36,7 +36,7 @@ jobs:
       - image: circleci/node:13.8.0    
 
     steps:
-      - run: return 1
+      - run: exit 1
       - run:
           name: when it fails
           command: echo "I'm the Error"
