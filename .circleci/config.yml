@@ -9,12 +9,11 @@ commands:
   print_pipeline_id:
     description: "A  simple command to print the pipeline id"
     parameters:
-      default: $CIRCLE_WORKFLOW_ID                          
+      default: "$CIRCLE_WORKFLOW_ID"                          
     steps:
-      - run echo $CIRCLEWORKFLOW_ID
+      - run echo << parameters >>
 
 jobs:
-
   print_id: 
     docker:
       - image: cimg/base:stable
