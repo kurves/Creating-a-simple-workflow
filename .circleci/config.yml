@@ -11,7 +11,7 @@ commands:
       - run: echo ${CIRCLE_WORKFLOW_ID}
 
 jobs:
-  print_id: 
+  my_job: 
     docker:
       - image: cimg/base:stable
     steps:
@@ -45,7 +45,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - save_hello_world_output
-      - print_id
+      - my_job
 
       - print_output_file:
           requires:
