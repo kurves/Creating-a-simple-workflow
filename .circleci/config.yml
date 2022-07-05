@@ -8,7 +8,6 @@ version: 2.1
 commands:  
   print_pipeline_id:
     description: "A  simple command to print the pipeline id"
-                       
     steps:
       - run: echo ${CIRCLE_WORKFLOW_ID}
 
@@ -19,11 +18,6 @@ jobs:
     steps:
       - print_pipeline_id:    
        
-
-
-
-
-
   save_hello_world_output:
     docker:
       - image: cimg/base:stable
