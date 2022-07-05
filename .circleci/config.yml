@@ -32,14 +32,15 @@ jobs:
 
 
   print_error:
-    - docker:
-       - image: circleci/node:13.8.0    
+    docker:
+      - image: circleci/node:13.8.0    
 
-  steps:
-    - run:
-        name: when it fails
-        command: curl --data fail_tests.push sms 0713853070
-        when: on_fail
+    steps:
+      - run: return 1
+      - run:
+          name: when it fails
+          command: echo "I'm the Error"
+          when: on_fail
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
